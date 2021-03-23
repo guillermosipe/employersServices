@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://employersServices.exercise.com/Soap"
+           xmlns:tns="http://employersServices.exercise.com/Soap" elementFormDefault="qualified">
+
+    <xs:element name="saveEmployerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name= "EmployerDetails" type="tns:EmployerDetails"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="saveEmployerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name= "EmployerDetails" type="tns:EmployerDetails"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="EmployerDetails">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="apellidoPaterno" type="xs:string"/>
+            <xs:element name="apellidoMaterno" type="xs:string"/>
+            <xs:element name="tipoDocumento" type="xs:string"/>
+            <xs:element name="numDocumento" type="xs:string"/>
+            <xs:element name="fechaNacimiento" type="xs:string"/>
+            <xs:element name="fechaVinculacion" type="xs:string"/>
+            <xs:element name="cargo" type="xs:string"/>
+            <xs:element name="salario" type="xs:double"/>
+        </xs:sequence>
+
+    </xs:complexType>
+
+</xs:schema>
