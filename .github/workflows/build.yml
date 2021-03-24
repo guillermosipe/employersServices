@@ -25,6 +25,14 @@ jobs:
           java-version: 1.8.0.282
       - name: Build with Maven
         run: mvn -B compile spotbugs:check 
+  Scan_Synk:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Run Snyk to check for vulnerabilities
+      uses: snyk/actions/maven@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   Scan_SonarCloud:
     runs-on: ubuntu-latest
     needs: [Build]
