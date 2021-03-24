@@ -38,7 +38,7 @@ jobs:
         with:
           java-version: 1.8.0.282
       - name: Run Snyk to check for vulnerabilities
-        run: snyk/actions/maven@master 
+        uses: snyk/actions/maven@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
