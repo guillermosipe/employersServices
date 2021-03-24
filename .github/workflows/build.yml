@@ -14,8 +14,9 @@ jobs:
           java-version: 1.8.0_282
       - name: Build with Maven
         run: mvn -B compile
-  Scan SonarCloud:
+  Scan_SonarCloud:
     runs-on: ubuntu-latest
+    needs: [Build] 
     steps:
       - uses: actions/checkout@v2
         with:
