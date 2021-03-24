@@ -32,7 +32,6 @@ jobs:
     needs: [Build]
     steps:
       - uses: actions/checkout@v2
-      - uses: snyk/actions/setup@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
         env:
