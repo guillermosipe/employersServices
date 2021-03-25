@@ -15,7 +15,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B compile
 
-  Scan_Spotbugs:
+  SAST_Spotbugs:
    runs-on: ubuntu-latest
    needs: [Build]
    steps:
@@ -27,7 +27,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B compile spotbugs:check
 
-  Scan_Synk:
+  SAST_Synk:
     runs-on: ubuntu-latest
     needs: [Build]
     steps:
@@ -40,7 +40,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-  Scan_Synk_Monitor:
+  SAST_Synk_Monitor:
     runs-on: ubuntu-latest
     needs: [Build]
     steps:
@@ -53,7 +53,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-  Scan_SonarCloud:
+  SAST_SonarCloud:
     runs-on: ubuntu-latest
     needs: [Build]
     steps:
