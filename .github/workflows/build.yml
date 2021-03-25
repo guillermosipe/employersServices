@@ -36,7 +36,7 @@ jobs:
         uses: snyk/actions/maven@master
         with:
           args: -org=guillermosipe /
-          commands: test
+          command: test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
