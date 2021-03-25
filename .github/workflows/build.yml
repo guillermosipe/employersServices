@@ -35,7 +35,7 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
         with:
-          args: -org=guillermosipe
+          args: --org=guillermosipe
           command: test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
