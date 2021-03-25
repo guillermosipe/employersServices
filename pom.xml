@@ -73,20 +73,6 @@
 				</dependencies>
 			</plugin>
 
-			<plugin>
-				<groupId>io.snyk</groupId>
-				<artifactId>snyk-maven-plugin</artifactId>
-				<version>1.2.9</version>
-				<executions>
-					<execution>
-						<id>snyk-test</id>
-						<goals>
-							<goal>test</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
 		</plugins>
 	</build>
 
