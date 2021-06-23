@@ -5,7 +5,23 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Mexico_City"
+    assignees:
+      - "guillermosipe"
+    target-branch: "security"
+    labels:
+      - "GH-Actions Security dependencies"
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Mexico_City"
+    assignees:
+      - "guillermosipe"
+    target-branch: "security"
+    labels:
+      - "GH-Actions Security dependencies"
